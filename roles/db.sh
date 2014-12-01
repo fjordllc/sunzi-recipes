@@ -1,5 +1,11 @@
-# Install Database Server
+# configure ufw
+if ufw status | grep -q 'Status: active'; then
+  echo "ufw already configured, skipping."
+else
+  ufw allow ssh #to make sure ssh connection is not dropped
+  ufw --force enable
+  ufw allow ssh
+  ufw allow 3306
+fi
 
-# source recipes/mongodb-10gen.sh           # MongoDB
-# apt-get -q -y install mysql-server-5.5    # MySQL 5.5 - You may need to enable Dotdeb in install.sh first
-# apt-get -y install redis-server           # Redis - You may need to enable Dotdeb in install.sh first
+apt-get -y install mysql-server
