@@ -8,4 +8,4 @@ else
   ufw allow 3306
 fi
 
-apt-get -y install mysql-server
+source recipes/mysql.sh

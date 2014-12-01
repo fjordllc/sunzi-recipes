@@ -1,12 +1,12 @@
-if [ -d ~/.ssh/authorized_keys ]; then
+if [ -d /root/.ssh/authorized_keys ]; then
   echo "ssh already created skipping"
 else
-  if [ ! -d ~/.ssh ]; then
-    mkdir ~/.ssh 
+  if [ ! -d /root/.ssh ]; then
+    mkdir /root/.ssh 
   fi
-  mv files/deploy_key ~/.ssh/authorized_keys
-  chmod 400 ~/.ssh/authorized_keys
-
+  mv files/deploy_key /root/.ssh/authorized_keys
+  chown -R root:root /root/.ssh
+  chmod 400 /root/.ssh/authorized_keys
   sed -i 's/.*PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
   service ssh reload
 fi

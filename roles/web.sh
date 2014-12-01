@@ -1,4 +1,4 @@
-apt-get -y install nginx mysql-client
+apt-get -y install mysql-client
 
 # configure ufw
 if ufw status | grep -q 'Status: active'; then
@@ -11,6 +11,7 @@ else
   #ufw allow https
 fi
 
+source recipes/nginx.sh
 source recipes/git.sh
 source recipes/nodejs.sh
 source recipes/imagemagick.sh
