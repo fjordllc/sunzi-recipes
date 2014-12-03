@@ -1,5 +1,5 @@
-if apt-cache search '~i ^mysql-client$' | grep -q mysql-client; then
+if sunzi.installed mysql-client; then
   echo 'mysql-server already installed, skipping.'
 else
-  apt-get -y install mysql-client  
+  sunzi.install mysql-client
 fi

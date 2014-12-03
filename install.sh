@@ -10,3 +10,4 @@ sunzi.mute 'apt-get update'
 sunzi.mute 'apt-get -y upgrade'
 source recipes/locale-jp.sh
 source recipes/ufw.sh
+source recipes/logrotate.sh

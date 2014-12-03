@@ -1,4 +1,4 @@
-apt-get -y install mysql-client
+source recipes/mysql-client.sh
 
 # configure ufw
 if ufw status | grep -q 'Status: active'; then
@@ -15,4 +15,5 @@ source recipes/nginx.sh
 source recipes/git.sh
 source recipes/nodejs.sh
 source recipes/imagemagick.sh
+source recipes/build-essential.sh
 source recipes/rbenv.sh <%= @attributes.ruby_version %>

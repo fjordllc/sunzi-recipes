@@ -1,5 +1,5 @@
-if apt-cache search '~i ^git-core$' | grep -q git-core; then
+if sunzi.installed git-core; then
   echo 'git-core already installed, skipping.'
 else
-  apt-get -y install git-core
+  sunzi.install git-core
 fi

@@ -1,5 +1,5 @@
-if aptitude search '~i ^nodejs$' | grep -q nodejs; then
+if sunzi.installed nodejs; then
   echo "nodejs already installed, skipping."
 else
-  apt-get -y install nodejs nodejs-legacy 
+  sunzi.install nodejs nodejs-legacy
 fi

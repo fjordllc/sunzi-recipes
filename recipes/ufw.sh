@@ -1,6 +1,5 @@
-# setup ufw
-if aptitude search '~i ^ufw$' | grep -q ufw; then
+if sunzi.installed ufw; then
   echo 'ufw already installed, skipping.'
 else
-  apt-get -y install ufw       
+  sunzi.install ufw
 fi
