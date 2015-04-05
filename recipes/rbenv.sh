@@ -34,6 +34,8 @@ else
   # for searching packages
   sunzi.mute 'apt-get -y install pkg-config'
 
+  sunzi.mute 'apt-get -y install libffi-dev'
+
   # install rbenv, ruby-build, and auto-rehash plugin
   git clone https://github.com/sstephenson/rbenv.git /usr/local/rbenv
   git clone https://github.com/sstephenson/ruby-build.git /usr/local/rbenv/plugins/ruby-build
