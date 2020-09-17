@@ -6,7 +6,5 @@ LANG=ja_JP.UTF-8
 LC_ALL=ja_JP.UTF-8
 EOF
   source /etc/environment
+  export LC_ALL="ja_JP.UTF-8"
 fi
-
-
-
