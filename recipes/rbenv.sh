@@ -36,10 +36,9 @@ else
 
   sunzi.mute 'apt-get -y install libffi-dev'
 
-  # install rbenv, ruby-build, and auto-rehash plugin
+  # install rbenv and ruby-build
   git clone https://github.com/sstephenson/rbenv.git /usr/local/rbenv
   git clone https://github.com/sstephenson/ruby-build.git /usr/local/rbenv/plugins/ruby-build
-  git clone https://github.com/sstephenson/rbenv-gem-rehash.git /usr/local/rbenv/plugins/rbenv-gem-rehash
 
   cat <<EOF > /etc/profile.d/rbenv.sh
 export RBENV_ROOT="/usr/local/rbenv"
