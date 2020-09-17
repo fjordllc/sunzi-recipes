@@ -52,5 +52,6 @@ EOF
   echo "Compiling Ruby. Grab some hot chocolate, this will take a while..."
   MAKE_OPTS="-j 4" rbenv install $1 -v
   rbenv global $1
-  gem install bundler --no-ri --no-rdoc
+  gem update --system
+  gem install bundler --no-document
 fi
