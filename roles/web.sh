@@ -8,12 +8,11 @@ else
   ufw --force enable
   ufw allow ssh
   ufw allow http
-  #ufw allow https
+  ufw allow https
 fi
 
 source recipes/nginx.sh
-source recipes/git.sh
 source recipes/nodejs.sh
 source recipes/imagemagick.sh
 source recipes/build-essential.sh
-source recipes/rbenv.sh <%= @attributes.ruby_version %>
+source recipes/rbenv.sh <%= @vars.ruby_version %>
