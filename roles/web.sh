@@ -17,3 +17,4 @@ source recipes/imagemagick.sh
 source recipes/build-essential.sh
 source recipes/rbenv.sh <%= @vars.ruby_version %>
 source recipes/certbot.sh
+source recipes/cron.sh
