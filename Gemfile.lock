@@ -1,0 +1,26 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    hashugar (1.0.1)
+    net-ssh (4.2.0)
+    rainbow (2.2.2)
+      rake
+    rake (13.0.1)
+    sunzi (2.1.0)
+      hashugar
+      net-ssh (< 5)
+      rainbow (~> 2.2)
+      thor (~> 0.20)
+    thor (0.20.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  sunzi
+
+RUBY VERSION
+   ruby 2.6.6p146
+
+BUNDLED WITH
+   2.1.4
