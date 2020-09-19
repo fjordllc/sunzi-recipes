@@ -53,5 +53,5 @@ EOF
   MAKE_OPTS="-j 4" rbenv install $1 -v
   rbenv global $1
   gem update --system
-  gem install bundler --no-document
+  gem install bundler:1.17.2 --no-document
 fi
