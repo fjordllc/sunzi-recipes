@@ -8,5 +8,4 @@ else
   ufw allow 3306
 fi
 
-source recipes/git.sh
 source recipes/mysql.sh
